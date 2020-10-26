@@ -1,26 +1,12 @@
 <template>
-  <div class="main-container">
-    <b-container class="search">
-      <b-row>
-        <b-col
-          class="position-relative d-flex justify-content-center search-tab"
-        >
-          <router-link class="search-link" to="/" exact>Job Search</router-link>
-        </b-col>
-
-        <b-col
-          class="position-relative d-flex justify-content-center search-tab"
-        >
-          <router-link class="search-link" to="#" exact>Profile</router-link>
-        </b-col>
-
-        <b-col
-          class="position-relative d-flex justify-content-center search-tab"
-        >
-          <router-link class="search-link" to="#" exact>Career</router-link>
-        </b-col>
-      </b-row>
-    </b-container>
+  <div class="container">
+    <nav class="container-item">
+      <router-link class="container-link" to="/" exact>Job Search</router-link>
+      <router-link class="container-link" to="#" exact>Profile</router-link>
+      <router-link class="container-link" to="#" exact
+        >Career advice</router-link
+      >
+    </nav>
   </div>
 </template>
 
@@ -31,29 +17,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.main-container {
+.container {
+  display: grid;
+  grid-template-columns: auto 1140px auto;
   background-color: rgb(247, 247, 247);
-}
 
-.search {
-  &-link {
-    color: black;
-    text-decoration: none;
-    height: 100%;
-    padding: 12px 0;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
-
-    &:hover {
-      text-decoration: none;
-    }
+  &-item {
+    grid-column-start: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
-  &-tab {
-    padding: 0;
+  &-link {
+    padding: 12px 0;
+    text-align: center;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    text-decoration: none;
+    color: black;
   }
 }
 

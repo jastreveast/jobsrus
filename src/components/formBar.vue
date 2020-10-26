@@ -1,43 +1,12 @@
 <template>
-  <section class="container-fluid">
-    <div class="container d-flex justify-content-center">
-      <b-form class="search-form" inline>
-        <b-row class="search-form-row">
-          <b-col cols="5">
-            <b-input
-              class="search-form-element"
-              placeholder="Enter keywords"
-            ></b-input>
-          </b-col>
-          <b-col cols="5">
-            <b-input
-              class="search-form-element"
-              placeholder="City, town or province"
-            ></b-input>
-          </b-col>
-          <b-col cols="2">
-            <b-button class="search-form-element" variant="primary"
-              >Seek</b-button
-            >
-          </b-col>
-        </b-row>
-        <b-form-group>
-          <b-form-group class="pt-3">
-            <b-form-checkbox-group id="checkbox-group-2" name="flavour-2">
-              <b-form-checkbox class="checkbox" value="full_time"
-                >Full time</b-form-checkbox
-              >
-              <b-form-checkbox class="checkbox" value="part_time"
-                >Part time</b-form-checkbox
-              >
-              <b-form-checkbox class="checkbox" value="w_f_h"
-                >Work from home</b-form-checkbox
-              >
-            </b-form-checkbox-group>
-          </b-form-group>
-        </b-form-group>
-      </b-form>
-    </div>
+  <section class="container">
+    <form class="container-form" action="#">
+      <label for="what">What</label>
+      <input id="what" type="text" placeholder="Enter keywords">
+      <label for="where">Where</label>
+      <input type="text" placeholder="Enter city or town">
+      <button>Seek</button>
+    </form>
   </section>
 </template>
 
@@ -48,30 +17,42 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.container-fluid {
-  background-color: #0d3880;
-  padding: 50px 0;
-  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25),
-    inset 0 -1px 5px rgba(0, 0, 0, 0.25);
-}
-
-.search-form {
-  width: 100%;
-
-  &-row {
-    width: 100%;
-  }
-
-  &-element {
-    width: 100% !important;
-  }
-}
-
 .container {
-  padding: 0;
+  display: grid;
+  grid-template-columns: auto 1140px auto;
+  background-color: #0d3880;
+  padding: 40px;
+  align-items: center;
+  
+
+  &-form {
+    grid-column-start: 2;
+    display: grid;
+    grid-template-columns: 2fr 2fr 0.5fr;
+    grid-template-rows: auto auto;
+
+    & > input[type="text"] {
+      grid-row-start: 2;
+      font-size: 1em;
+      padding: 12px 12px;
+      border: none;
+      margin-right: 10px;
+    };
+  }
 }
 
-.checkbox {
+button {
+  grid-row-start: 2;
+  background: #e60278;
+  border: none;
+  border-radius: 3px;
   color: white;
+  font-size: 1em;
+  
+}
+
+label { 
+  color: white;
+  margin-bottom: 5px;
 }
 </style>

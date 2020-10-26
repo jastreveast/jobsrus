@@ -1,20 +1,14 @@
 <template>
-  <div class="main-container">
-    <b-container>
-      <b-row align-h="between">
-        <b-col cols="4">
-          <img src="@/assets/logo.png" alt="" style="height: 60px;" />
-        </b-col>
-        <b-col cols="4" class="d-flex justify-content-end">
-          <div class="d-flex align-items-center">
-            <b-link>Register</b-link>
-
-            <b-link>Sign in</b-link>
-          </div>
-        </b-col>
-      </b-row>
-    </b-container>
-  </div>
+  <header>
+    <div class="wrapper">
+      <img src="@/assets/logo.png" alt="logo" />
+      <div>
+        <a href="#">Sign in</a>
+        |
+        <a href="#">Register</a>
+      </div>
+    </div>
+  </header>
 </template>
 
 <script>
@@ -23,10 +17,32 @@ export default {
 };
 </script>
 
-<style scoped>
-.main-container {
-  background-color: white;
-  width: 100%;
-  padding: 20px 0;
+<style lang="scss" scoped>
+@media (min-width: 640px) {
 }
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: grid;
+    grid-template-columns: auto 1140px auto;
+    grid-template-rows: auto;
+  }
+
+  .wrapper {
+    grid-column-start: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+
+    & > img {
+      height: 80px;
+    }
+  }
+}
+
+
 </style>
