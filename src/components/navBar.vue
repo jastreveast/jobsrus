@@ -1,14 +1,9 @@
 <template>
-  <header>
-    <div class="wrapper">
-      <img src="@/assets/logo.png" alt="logo" />
-      <div>
-        <a href="#">Sign in</a>
-        |
-        <a href="#">Register</a>
-      </div>
-    </div>
-  </header>
+  <nav>
+    <router-link to="/" exact>Job Search</router-link>
+    <router-link to="#" exact>Profile</router-link>
+    <router-link to="#" exact>Career advice</router-link>
+  </nav>
 </template>
 
 <script>
@@ -18,31 +13,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media (min-width: 640px) {
+nav {
+  background: var(--grey);
+  padding: 0 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+ 
+
+a {
+  text-decoration: none;
+  color: black;
+  flex: 1;
+  text-align: center;
+  padding: 12px;
 }
 
-@media (min-width: 768px) {
+.router-link-active {
+  background: var(--primary);
+  color: white;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: grid;
-    grid-template-columns: auto 1140px auto;
-    grid-template-rows: auto;
+@media all and (max-width: 740px) {
+  nav {
+    display: none;
   }
-
-  .wrapper {
-    grid-column-start: 2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-
-    & > img {
-      height: 80px;
-    }
-  }
 }
-
-
 </style>

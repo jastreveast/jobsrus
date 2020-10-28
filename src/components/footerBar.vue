@@ -1,8 +1,7 @@
 <template>
-    <footer class="container-fluid">
+    <footer>
 
     </footer>
-    
 </template>
 
 <script>
@@ -12,8 +11,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .container-fluid {
-        background-color: #d6d6d6;
-        height: 300px;
-    }
+footer {
+    height: 700px;
+    background: grey;
+    
+    
+}
+
 </style>

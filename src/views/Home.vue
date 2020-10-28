@@ -1,26 +1,40 @@
 <template>
   <div>
-    <nav-bar />
-    <search-bar />
-    <form-bar />
+    <free-bar />
+    <head-bar />
+    <div class="stick">
+      <nav-bar />
+      <search-bar />
+    </div>
+    <info-bar />
+    <footer-bar/>
   </div>
 </template>
 
 <script>
+import headBar from "@/components/headBar.vue";
 import navBar from "@/components/navBar.vue";
+import freeBar from "@/components/freeBar.vue";
 import searchBar from "@/components/searchBar.vue";
-import formBar from "@/components/formBar.vue";
-
+import infoBar from "@/components/infoBar.vue";
+import footerBar from "@/components/footerBar.vue";
 
 export default {
   name: "Home",
   components: {
+    headBar,
     navBar,
+    freeBar,
     searchBar,
-    formBar
-    
+    infoBar,
+    footerBar
   },
 };
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.stick {
+  position: sticky;
+  top: 0;
+}
+</style>

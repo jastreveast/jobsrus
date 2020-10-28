@@ -1,13 +1,17 @@
 <template>
-  <div class="container">
-    <nav class="container-item">
-      <router-link class="container-link" to="/" exact>Job Search</router-link>
-      <router-link class="container-link" to="#" exact>Profile</router-link>
-      <router-link class="container-link" to="#" exact
-        >Career advice</router-link
-      >
-    </nav>
-  </div>
+  <section>
+    <form action="#">
+      <div class="flex">
+        <label for="what">What</label>
+        <input id="what" type="text" placeholder="Enter keywords" />
+      </div>
+      <div class="flex">
+          <label for="where">Where</label>
+        <input id="where" type="text" placeholder="Enter town or city" />
+      </div>
+      <button>Seek</button>
+    </form>
+  </section>
 </template>
 
 <script>
@@ -17,29 +21,70 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-  display: grid;
-  grid-template-columns: auto 1140px auto;
-  background-color: rgb(247, 247, 247);
+section {
+  background: var(--primary);
+  padding: 60px 0;
+  box-shadow: 0 .25rem .25rem rgba(0,0,0,.25);
 
-  &-item {
-    grid-column-start: 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  &-link {
-    padding: 12px 0;
-    text-align: center;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    text-decoration: none;
-    color: black;
+  & > form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    margin: 0 200px;
   }
 }
 
-.router-link-active {
-  background-color: #0d3880;
+input[type="text"] {
+  padding: 12px;
+  font-size: 1em;
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  padding: 12px;
   color: white;
+  border: none;
+  background: var(--secondary);
+  font-size: 1em;
+  border-radius: 3px;
+  flex: 1;
+  flex-shrink: 2;
+}
+
+.flex {
+    flex: 2;
+    flex-shrink: 1;
+    margin-right: 10px;
+}
+
+label {
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+}
+
+@media all and (max-width: 740px) {
+  section > form {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .flex {
+      margin-right: 0;
+      margin-bottom: 5px;
+      width: 100%;
+  }
+
+  button {
+      width: 100%;
+      margin-top: 15px;
+  }
 }
 </style>

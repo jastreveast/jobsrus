@@ -9,10 +9,21 @@
 
   * {
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
   body {
-    margin: 0;
-    padding: 0;
+    height: 100vh;
   }
+
+  :root {
+    --primary: #0d3880;
+    --secondary: rgb(226, 55, 155);
+    --info: rgb(199, 234, 250);
+    --link: #2765cf;
+    --grey: rgb(240, 240, 240);
+  }
+
 </style>
