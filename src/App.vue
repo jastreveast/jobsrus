@@ -6,6 +6,8 @@
 
 <style lang="scss">
   @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
 
   * {
     font-family: 'Roboto', sans-serif;
@@ -19,10 +21,10 @@
   }
 
   :root {
-    --primary: #0d3880;
-    --secondary: rgb(226, 55, 155);
-    --info: rgb(199, 234, 250);
-    --link: #2765cf;
+    --primary: #0D2C54;
+    --secondary: #F6511D;
+    --action: #7FB800;
+    --link: #00A6ED;
     --grey: rgb(240, 240, 240);
   }
 

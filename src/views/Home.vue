@@ -2,10 +2,11 @@
   <div>
     <free-bar />
     <head-bar />
-    <div class="stick">
+  
       <nav-bar />
       <search-bar />
-    </div>
+      <category-bar/>
+    
     <info-bar />
     <footer-bar/>
   </div>
@@ -18,6 +19,7 @@ import freeBar from "@/components/freeBar.vue";
 import searchBar from "@/components/searchBar.vue";
 import infoBar from "@/components/infoBar.vue";
 import footerBar from "@/components/footerBar.vue";
+import categoryBar from "@/components/categoryBar.vue";
 
 export default {
   name: "Home",
@@ -27,14 +29,12 @@ export default {
     freeBar,
     searchBar,
     infoBar,
-    footerBar
+    categoryBar,
+    footerBar,
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.stick {
-  position: sticky;
-  top: 0;
-}
+
 </style>

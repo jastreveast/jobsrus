@@ -1,75 +1,79 @@
 <template>
-    <section>
-        <div>
-            <h1>We're here to help you navigate</h1>
-            <h1>the road ahead</h1>
-            <h4>Get practical tips and tools for COVID-19</h4>
-            <button>Explore</button>
-        </div>
-
-        <img src="@/assets/job-search.svg" alt="person working">
-
-    </section>
+  <section>
+    <img src="@/assets/phone.svg" alt="" />
+    <div class="main">
+      <h1>Find jobs on the GO</h1>
+      <p>with our mobile app, on IOS and Android</p>
+      <a href="#">Download our mobile app now</a>
+      <div class="logos">
+        <img src="@/assets/apple.svg" alt="apple app store" />
+        <img src="@/assets/google.svg" alt="google play store" />
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
 export default {
-    name: "infoBar"
-}
+  name: "infoBar",
+};
 </script>
 
 <style lang="scss" scoped>
-
 section {
-    background: var(--info);
-    padding: 50px 200px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  background: var(--primary);
+  padding: 0 200px;
+  height: 300px;
+  position: relative;
+  z-index: 500;
+  display: flex;
+
+  & > img {
+    position: absolute;
+    bottom: 0;
+    left: 200px;
+    height: 350px;
+  }
+}
+
+.main {
+  text-align: left;
+  margin-left: 500px;
+  margin-top: auto;
+  margin-bottom: auto;
+
+}
+
+.logos {
 
     & > img {
-        height: 350px;
-        width: auto;
-        
+        display: inline-block;
+        height: 40px;
+        margin-top: 20px;
+        margin-right: 20px;
     }
+}
 
-    & > div {
-        padding-top: 30px;
-        color: var(--primary);
+h1 {
+  color: white;
+  font-size: 2em;
+}
 
-        & > h4 {
-            margin-top: 10px;
-            font-weight: 200;
-        }
+p {
+  color: white;
+  font-size: 1.5em;
+}
 
-        & > button {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 12px;
-            margin-top: 12px;
-            font-size: 18px;
-            border-radius: 3px;
-        }
-    }
+a {
+  color: var(--action);
+  font-size: 1em;
+  text-decoration: none;
 }
 
 @media all and (max-width: 740px) {
-    section {
-        display: block;
-        text-align: center;
-
-        & > img {
-            margin-left: -40px;
-            min-width: 340px;
-            height: auto;
-        }
-
-        & > div {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-    }
+  section {
+    display: block;
+    text-align: center;
+  }
 }
-
 </style>

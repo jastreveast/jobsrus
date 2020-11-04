@@ -1,7 +1,7 @@
 <template>
   <nav>
     <router-link to="/" exact>Job Search</router-link>
-    <router-link to="#" exact>Profile</router-link>
+    <router-link to="profile" exact>Profile</router-link>
     <router-link to="#" exact>Career advice</router-link>
   </nav>
 </template>
@@ -19,6 +19,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  border-bottom: 10px solid var(--primary);
 }
  
 

@@ -9,7 +9,7 @@
           <label for="where">Where</label>
         <input id="where" type="text" placeholder="Enter town or city" />
       </div>
-      <button>Seek</button>
+      <button>Find Jobs</button>
     </form>
   </section>
 </template>
@@ -74,6 +74,7 @@ label {
   section > form {
     flex-direction: column;
     justify-content: center;
+    margin: 0 20px;
   }
 
   .flex {
@@ -86,5 +87,7 @@ label {
       width: 100%;
       margin-top: 15px;
   }
+
+
 }
 </style>

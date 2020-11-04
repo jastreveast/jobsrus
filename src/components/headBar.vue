@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="container">
-      <img class="container-logo" src="@/assets/logo.png" alt="logo" />
+      <img class="container-logo" src="@/assets/logo.svg" alt="logo" />
       <nav class="link-container">
         <router-link class="link" to="#">Sign in</router-link>
         <span class="space link">|</span>
@@ -30,7 +30,7 @@ header {
   align-items: center;
 
   &-logo {
-    height: 60px;
+    height: 30px;
     width: auto;
   }
 }
