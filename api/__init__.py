@@ -18,9 +18,13 @@ def create_app():
         # import all parts of the application
         # eg from .home import home 
         from .index import index
+        from .auth import auth
+        from .job_search import job_search
         # register blueprints 
         # app.register_blueprint(home.home_bp)
         app.register_blueprint(index.index_bp)
+        app.register_blueprint(auth.auth_bp)
+        app.register_blueprint(job_search.job_search_bp)
 
         return app 
 

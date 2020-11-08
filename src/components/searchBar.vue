@@ -3,20 +3,35 @@
     <form action="#">
       <div class="flex">
         <label for="what">What</label>
-        <input id="what" type="text" placeholder="Enter keywords" />
+        <input v-model="what" id="what" type="text" placeholder="Enter keywords" />
       </div>
       <div class="flex">
           <label for="where">Where</label>
-        <input id="where" type="text" placeholder="Enter town or city" />
+        <input v-model="where" id="where" type="text" placeholder="Enter town or city" />
       </div>
-      <button>Find Jobs</button>
+      <button @click.prevent="jobs">Find Jobs</button>
     </form>
   </section>
 </template>
 
 <script>
+
+
+
 export default {
   name: "searchBar",
+  data() {
+    return {
+      what: '',
+      where: ''
+    }
+  },
+  methods: {
+    jobs() {
+      const payload = {'what': this.what, 'where': this.where}
+      this.$store.dispatch('fetchJobs', payload)
+    }
+  }
 };
 </script>
 

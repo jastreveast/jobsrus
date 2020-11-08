@@ -2,13 +2,12 @@
   <div>
     <free-bar />
     <head-bar />
-  
-      <nav-bar />
-      <search-bar />
-      <category-bar/>
-    
+    <nav-bar />
+    <search-bar />
+    <job-bar />
+    <category-bar />
     <info-bar />
-    <footer-bar/>
+    <footer-bar />
   </div>
 </template>
 
@@ -20,6 +19,7 @@ import searchBar from "@/components/searchBar.vue";
 import infoBar from "@/components/infoBar.vue";
 import footerBar from "@/components/footerBar.vue";
 import categoryBar from "@/components/categoryBar.vue";
+import jobBar from "@/components/jobBar.vue";
 
 export default {
   name: "Home",
@@ -28,6 +28,7 @@ export default {
     navBar,
     freeBar,
     searchBar,
+    jobBar,
     infoBar,
     categoryBar,
     footerBar,
@@ -35,6 +36,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

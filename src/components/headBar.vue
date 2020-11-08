@@ -3,7 +3,7 @@
     <div class="container">
       <img class="container-logo" src="@/assets/logo.svg" alt="logo" />
       <nav class="link-container">
-        <router-link class="link" to="#">Sign in</router-link>
+        <router-link class="link" to="/profile">Sign in</router-link>
         <span class="space link">|</span>
         <router-link class="link" to="#">Employer site</router-link>
       </nav>

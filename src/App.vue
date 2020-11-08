@@ -26,6 +26,7 @@
     --action: #7FB800;
     --link: #00A6ED;
     --grey: rgb(240, 240, 240);
+    --darkgrey: rgb(177, 177, 177);
   }
 
 </style>
