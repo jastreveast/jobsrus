@@ -5,25 +5,20 @@
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
 ### Compiles and minifies for production
 ```
 npm run build
 ```
 
-### Run your unit tests
+### Build Nginx and Web Api with docker
 ```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
+docker compose up
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### View project
+```
+go to http://0.0.0.0/
+```
+
+### TODO
+mount volumes for hot reload
