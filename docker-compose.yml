@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  web-service:
+    build: ./
+    container_name: web-service
+    restart: always
+    environment: 
+      SECRET_KEY: 'SOME SUPER LONG SECRET KEY'
+      SQLALCHEMY_DATABASE_URI: 'sqlite:///jobs.db'
+      SQLALCHEMY_TRACK_MODIFICATIONS: 0 
+    expose: 
+      - 9000
+  
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    restart: always
+    ports:
+      - 80:80
+
+
+
+
+ 

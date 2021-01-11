@@ -3,8 +3,7 @@
     <free-bar />
     <head-bar />
     <nav-bar />
-    <search-bar />
-    <job-bar />
+    <search-area />
     <category-bar />
     <info-bar />
     <footer-bar />
@@ -15,11 +14,10 @@
 import headBar from "@/components/headBar.vue";
 import navBar from "@/components/navBar.vue";
 import freeBar from "@/components/freeBar.vue";
-import searchBar from "@/components/searchBar.vue";
 import infoBar from "@/components/infoBar.vue";
 import footerBar from "@/components/footerBar.vue";
 import categoryBar from "@/components/categoryBar.vue";
-import jobBar from "@/components/jobBar.vue";
+import searchArea from "@/components/searchArea.vue";
 
 export default {
   name: "Home",
@@ -27,11 +25,10 @@ export default {
     headBar,
     navBar,
     freeBar,
-    searchBar,
-    jobBar,
     infoBar,
     categoryBar,
     footerBar,
+    searchArea,
   },
 };
 </script>

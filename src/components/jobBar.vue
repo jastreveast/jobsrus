@@ -1,30 +1,31 @@
 <template>
-  <div class="container">
+  <div class="container" v-if="hasJobs">
+    <newsletter/>
     <job-card
-    v-for="job in jobs"
-    v-bind:key="job.id"
-    :title="job.title"
-    :company="job.company"
-    :description="job.description"/>
+      v-for="job in getJobs"
+      v-bind:key="job.id"
+      :title="job.title"
+      :company="job.company"
+      :description="job.description"
+    />
   </div>
 </template>
 
 <script>
+import { createNamespacedHelpers } from "vuex";
+const { mapGetters } = createNamespacedHelpers("api");
 import jobCard from "@/components/jobCard.vue";
+import newsletter from "@/components/newsletter.vue";
+
 export default {
   name: "jobBar",
-  data() {
-    return {
-      id: 1,
-    };
-  },
+
   components: {
     jobCard,
+    newsletter,
   },
   computed: {
-    jobs() {
-      return this.$store.getters.getJobs;
-    },
+    ...mapGetters(["getJobs", "hasJobs"]),
   },
 };
 </script>
@@ -35,5 +36,4 @@ export default {
   padding: 20px 200px;
   background-color: white;
 }
-
 </style>
